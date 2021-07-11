@@ -23,7 +23,7 @@ public class Sale {
 	private LocalDate date;
 	
 	@ManyToOne
-	@JoinColumn(name = "seller = id")
+	@JoinColumn(name = "seller_id")
 	private Seller seller;
 	
 	public Sale() {

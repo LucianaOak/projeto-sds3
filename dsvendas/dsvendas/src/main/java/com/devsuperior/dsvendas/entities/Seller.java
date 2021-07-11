@@ -7,10 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
 import java.util.ArrayList;
-
-	
 
 	@Entity
 	@Table(name ="tb_sellers")
@@ -18,7 +15,7 @@ import java.util.ArrayList;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String name;
 	
 	@OneToMany(mappedBy = "seller")
@@ -29,16 +26,16 @@ import java.util.ArrayList;
 		}
 
 	public Seller(Long id, String name) {
-		Id = id;
+		this. id = id;
 		this.name = name;
 	}
 
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -52,8 +49,5 @@ import java.util.ArrayList;
 	public List<Sale> getSales() {
 		return sales;
 	}
-	
-	
-	
 	
 }
